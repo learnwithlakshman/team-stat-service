@@ -1,12 +1,15 @@
 package com.lwl.ms.teamstatservice.dto;
 
-import lombok.Getter;
-import lombok.Setter;
+import lombok.*;
 
 @Getter
 @Setter
-public class TeamStatDto {
+@Builder
+@NoArgsConstructor
+@AllArgsConstructor
+public class TeamDetailsStatDto {
         private String label;
+        private String teamName;
         private int count;
         private double totalAmount;
 }

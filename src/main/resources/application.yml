@@ -1,7 +1,8 @@
 spring:
   application:
-    name: player-service
+    name: team-stat-service
 server:
   port: ${PORT:8083}
   servlet:
     context-path: /teamstat
+
