@@ -7,7 +7,7 @@ import lombok.*;
 @NoArgsConstructor
 @Builder
 public class TeamAmountDto {
-	private String label;
-	private int count;
-	private double amount;
+    private String label;
+    private int count;
+    private double amount;
 }

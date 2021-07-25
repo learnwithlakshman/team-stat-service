@@ -1,9 +1,6 @@
 package com.lwl.ms.teamstatservice.service;
-
 import com.lwl.ms.teamstatservice.domain.Team;
-import com.lwl.ms.teamstatservice.dto.PlayersDto;
 import com.lwl.ms.teamstatservice.dto.TeamAmountDto;
-import com.lwl.ms.teamstatservice.dto.TeamRoleStatDto;
 import com.lwl.ms.teamstatservice.dto.TeamDetailsStatDto;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.core.ParameterizedTypeReference;
@@ -11,8 +8,6 @@ import org.springframework.http.HttpMethod;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
-
-import java.lang.reflect.ParameterizedType;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
@@ -57,22 +52,6 @@ public class TeamStatServiceImpl implements  TeamStatService{
         log.info("Total {} teams found",list.size());
         return list;
     }
-
-    @Override
-    public List<TeamRoleStatDto> getRoleCountStat(String label) {
-        return null;
-    }
-
-    @Override
-    public List<TeamAmountDto> getRoleAmountStat(String label) {
-        return null;
-    }
-
-    @Override
-    public List<PlayersDto> getPlayers() {
-        return null;
-    }
-
     private Optional<String> getTeamName(String label, List<Team> teams){
        return teams.stream().filter(t->t.getLabel().equalsIgnoreCase(label)).map(t->t.getName()).findFirst();
     }
